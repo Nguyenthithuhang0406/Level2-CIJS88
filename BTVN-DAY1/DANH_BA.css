@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 50%;
+    margin-left: 25%;
+    height: 1000px;
+    border: 1px solid darkgray;
+    border-radius: 20px;
+}
+.bd{
+    padding: 100px 100px;
+}
+/* #name #phone #search-input{
+    height: 30px;
+}
+button{
+    height: 30px;
+} */

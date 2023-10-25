@@ -1,0 +1,16 @@
+.my-spacing{
+    margin-right: 10px;
+}
+.full-width{
+    width: 100%;
+}
+#contact-list{
+    margin-top: 20px;
+}
+.contact-item{
+    margin-bottom: 10px;
+    background-color: #e6e6e6;
+}
+.container{
+    margin-top: 20px;
+}

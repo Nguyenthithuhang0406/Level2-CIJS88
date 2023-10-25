@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANH BẠ</title>
+</head>
+<body>
+    <div class="bd">
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Tên" required/>
+
+            <input type="text" id="phone" placeholder="Số điện thoại" required/>
+
+            <button onclick="add()">Thêm danh bạ</button>
+        </form>
+
+        <br>
+
+        <form id="search" >
+            <input type="text" id="search-input" placeholder="tìm kiếm">
+            <button onclick="searchContacts()">Tìm </button>
+            <button onclick="Delete()">Xoá Trùng</button>
+        </form>
+
+        <div  class="li" id="render">
+            <li id="li"></li>
+        </div>
+    </div>
+    <script>
+        var data = []
+        function add(){
+            var item_name = document.getElementById("name").value
+            var item_phone = document.getElementById("phone").value
+        cosole.log(item_name)
+
+            var item = {
+                Name: item_name,
+                Phone: item_phone
+            }
+
+            data.push(item)
+            render()
+            item_name = ''
+            item_phone = ''
+        }
+        function render(){
+            // li = `
+            //     <li></li>
+            //     `
+            for (let i = 0; i < data.length; i++){
+                let contactsList = document.getElementById('render');
+                let li = document.getElementById('li');
+                 li.innerHTML = `${data[i].Name}_ ${data[i].Phone}`
+                 contactsList.appendChild(li);
+            }
+            // document.getElementById("render").innerHTML = li
+        }
+    </script>
+        
+</body>
+</html>
